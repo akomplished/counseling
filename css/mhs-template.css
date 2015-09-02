@@ -1,0 +1,10 @@
+﻿body {
+    background: url('../images/pattern-trans-left.png'), url('../images/pattern-trans-right.png'), url('../images/pattern-inner.png');
+    background-position:left top, right top, center center;
+    background-repeat: repeat-y, repeat-y, repeat;
+    background-color: rgb(38,60,39);
+}
+
+.grid_10 .box {
+    background-color: transparent;
+}
