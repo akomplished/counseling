@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -23,7 +23,9 @@
             margin-left: 4.0em;
             margin-right: 4.0em;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.15em;
+            border-top: solid 1px;
+            border-bottom: solid 1px;
         }
 
         .container_16 {
@@ -35,81 +37,60 @@
         }
 
             #counselor-box .counselor {
-                display: block;
+                display: inline-block;
                 cursor: pointer;
                 overflow: hidden;
-                width: 200px;
-                padding: 5px;
-                padding-bottom: 10px;
+                padding: 3px;
             }
 
-        #counselor {
-            position: relative;
-        }
-
-        .counselors {
-            display: block;
+        .counselors ul {
+            margin: 0;
+            padding: 0;
             list-style: none;
-            margin: 0 0 0 0;
-            overflow: hidden;
         }
 
-            .counselors li {
-                float: left;
-                padding: 0;
+            .counselors ul li:first-child {
+                margin: 0;
             }
 
-            .counselors li > div {
-                font-size: 14px;
-                font-weight: bold;
+            .counselors ul li {
+                display: inline-block;
+                padding: 0;
+                margin: 2%;
+            }
+
+            .counselors li > span {
+                float: left;
             }
 
         #counselor-box h2 {
             margin: 0;
             padding: 0;
-            text-align: center;
         }
 
-        #counselors .one {
+        .counselors ul li .one {
             background: url('images/ddemmon.JPG') 50% 35% no-repeat; /* 50% 50% centers image in div */
-            width: 150px;
-            height: 150px;
-                        -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
-            -moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
-            box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
         }
 
-        #counselors .two {
+        .counselors ul li .two {
             background: url('images/aaguirre.JPG') 50% 25% no-repeat; /* 50% 50% centers image in div */
-            width: 150px;
-            height: 150px;
-                        -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
-            -moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
-            box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
         }
 
-        #counselors .three {
+        .counselors ul li  .three {
             background: url('images/mmcintosh.JPG') 50% 10% no-repeat; /* 50% 50% centers image in div */
-            width: 150px;
-            height: 150px;
-                        -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
-            -moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
-            box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
         }
 
-        #counselors .four {
-            background: url('null') 50% 35% no-repeat; /* 50% 50% centers image in div */
-            width: 150px;
-            height: 150px;
-                        -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
-            -moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
-            box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
+        .counselors ul li  .four {
+            background: url('images/nanaya.JPG') 50% 20% no-repeat; /* 50% 50% centers image in div */
         }
 
-        #counselors .five {
+        .counselors ul li  .five {
             background: url('images/aruiz.JPG') 50% 20% no-repeat; /* 50% 50% centers image in div */
-            width: 150px;
-            height: 150px;
+        }
+
+        .counselor {
+            width: 125px;
+            height: 125px;
             -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
             -moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
             box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
@@ -131,65 +112,66 @@
         </div>
         <div class="clear"></div>
         <div class="grid_12 prefix_2 suffix_2" id="counselors">
-            <div class="box" id="counselor-box">
+            <div class="box counselors ui-widget-content ui-corner-all" id="counselor-box">
+                <div style="margin: 0px; position: static; overflow: hidden; text-align: center;" class="block">
+                    <h2><a class="ui-corner-top" style="margin-bottom: 4px;" href="#">2015-2016 Moorpark High School Counselors</a></h2>
+</div>
+                <center>
+                    <ul>
+                        <li>
+                            <a class="counselor one ui-corner-all" href="#"></a>
+                            <div>
+                                Mrs. Demmon (A - Da)
+                            </div>
+                        </li>
+                        <li>
+                            <a class="counselor two ui-corner-all" href="#">
+                            </a>
+                            <div>Mrs. Aguirre (De - Iq)</div>
+                        </li>
+                        <li>
+                            <a class="counselor three ui-corner-all" href="#">
+                            </a>
+                            <div>Mrs. McIntosh (Ir - M)</div>
+                        </li>
+                        <li>
+                            <a class="counselor four ui-corner-all" href="#">
+                            </a>
+                            <div>Mrs. Anaya (N - Ro)</div>
+                        </li>
+                        <li>
+                            <a class="counselor five ui-corner-all" href="#">
+                            </a>
+                            <div>Mr. Ruiz (Ru - Z)</div>
+                        </li>
 
-                <div style="margin: 0px; position: static; overflow: hidden;" class="block">
-                    <h2 class="ui-widget-header" style="margin-bottom: 4px;">Moorpark High School Counselors</h2>
-                    <center>
-                        <ul class="counselors">
-                            <li>
-                                <a class="counselor one ui-corner-all" href="#">
-                                </a>
-                                <div>Mrs. Demmon (A-Da)</div>
-                            </li>
-                            <li>
-                                <a class="counselor two ui-corner-all" href="#">
-                                </a>
-                                <div>Mrs. Aguirre (De-Iq)</div>
-                            </li>
-                            <li>
-                                <a class="counselor three ui-corner-all" href="#">
-                                </a>
-                                <div>Mrs. McIntosh (Ir-M)</div>
-                            </li>
-                            <li>
-                                <a class="counselor four ui-corner-all" href="#">
-                                </a>
-                                <div>Mrs. Anaya (N-Ro)</div>
-                            </li>
-                            <li>
-                                <a class="counselor five ui-corner-all" href="#">                                    
-                                </a>
-                                <div>Mr. Ruiz (Ru-Z)</div>
-                            </li>
-                            
-                        </ul>
-                    </center>
-                </div>
+                    </ul>
+                </center>
             </div>
+            
         </div>
         <div class="clear"></div>
         <div class="grid_12 prefix_2 suffix_2">
-            <div class="box articles" id="articles">
-                    <h2><a class="ui-corner-top" href="#">Naviance - Family Connection</a></h2>
-                    <span>College Applications - Transcripts - Letters of Recommendation &amp; More</span>
-                    <div class="first article ui-widget-content ui-corner-all">
-                        <p class="meta">Students can access Naviance using their Student Connection username and password to access Naviance - Family Connection</p>
-                        <a href="http://connection.naviance.com/moorparkhi" target="_blank" class="image">
-                            <img src="images/naviance_60x60.jpg" width="60" height="60" alt="photo" />
-                        </a>
-                        <p>Naviance provides College and Career readiness solutions that will assist you in planning your future goals by connecting your academic achievements to your post-secondary aspirations.  At Moorpark High School Naviance provides students access to request College and Career related items such as:</p>
-                        <ul style="display: inline-block;">
-                            <li>Transcripts</li>
-                            <li>Letters of Recommendation</li>
-                            <li>College Applications</li>
-                            <li>Career Assessment Surveys</li>
-                            <li>College and Career Research Tools</li>
-                        </ul>
-                    </div>
-                    <div class="article">
-                    </div>
+            <div class="box articles ui-widget-content ui-corner-all" id="articles">
+                <h2><a class="ui-corner-top" href="#">Naviance - Family Connection</a></h2>
+                <span>College Applications - Transcripts - Letters of Recommendation &amp; More</span>
+                <div class="first article">
+                    <p class="meta">Students can access Naviance using their Student Connection username and password to access Naviance - Family Connection</p>
+                    <a href="http://connection.naviance.com/moorparkhi" target="_blank" class="image">
+                        <img src="images/naviance_60x60.jpg" width="60" height="60" alt="photo" />
+                    </a>
+                    <p>Naviance provides College and Career readiness solutions that will assist you in planning your future goals by connecting your academic achievements to your post-secondary aspirations.  At Moorpark High School Naviance provides students access to request College and Career related items such as:</p>
+                    <ul style="display: inline-block;">
+                        <li>Transcripts</li>
+                        <li>Letters of Recommendation</li>
+                        <li>College Applications</li>
+                        <li>Career Assessment Surveys</li>
+                        <li>College and Career Research Tools</li>
+                    </ul>
                 </div>
+                <div class="article">
+                </div>
+            </div>
             </div>
         </div>
     </div>
