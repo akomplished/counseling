@@ -19,16 +19,30 @@
             background-color: rgb(38,60,39);
         }
 
-        #motto {
+        .banner {
+            background: url('images/moorpark.png') no-repeat, url('images/pattern-inner.png') repeat-x, url('images/campus.png') no-repeat;
+            background-position: 0% 0%, 0% 100%, 25% 50%;
+            background-clip: border-box, content-box;
+            height: 150px;
             width:  100%;
+            overflow: visible;
+
+        }
+
+        #motto {
+            background: url('images/goldbar-left.png') no-repeat, url('images/goldbar-right.png') no-repeat, url('images/goldmiddle.png') repeat-x;
+            background-position: bottom left, bottom right, bottom left;
+            position: relative;
+            top: 85%;
+            left: 0%;
         }
 
         #motto span {
             padding: 0 10px;
             font-weight: bold;
             font-size: 1.15em;
-            border-top: solid 1px;
-            border-bottom: solid 1px;
+            color: rgb(106, 75, 38);
+            text-shadow: 0 0 5px rgb(255, 255, 190);
         }
 
         #motto span:nth-child(even) {
@@ -50,20 +64,26 @@
                 padding: 3px;
             }
 
+        .counselors a:first-child {
+            margin: 0;
+        }
+
         .counselors ul {
             margin: 0;
             padding: 0;
             list-style: none;
+            text-align: center;
         }
 
-            .counselors ul li:first-child {
-                margin: 0;
+            .counselors ul li:nth-child(even) {
+                margin-left: 1%;
+                margin-right: 1%;
             }
 
             .counselors ul li {
                 display: inline-block;
                 padding: 0;
-                margin: 2%;
+                margin: 0;
             }
 
             .counselors li > span {
@@ -106,56 +126,49 @@
 </head>
 <body>
     <div class="container_16">
-        <div class="grid_12 prefix_2 suffix_2" id="header">
-            <div class="box">
-                <h1 id="branding">Counseling Department</h1>
-                <span style="font-size: 20px;">This website is currently under construction.  Check back soon!</span>
-                <div style="margin: 0px; position: static; overflow: hidden;" class="block">
-                    <div id="motto" class="ui-widget-header" style="text-align: center; font-size: 14px; font-family: Georgia, 'Times New Roman', Times, serif">
-                        <span>Maturity</span><span>Humanity</span><span>Scholarship</span>
-                    </div>
+        <div class="grid_12 prefix_2 suffix_2">
+            <div class="banner" id="header">
+                <div id="motto" style="text-align: center; margin-bottom: 10px; font-size: 14px; font-family: Georgia, 'Times New Roman', Times, serif">
+                    <span>Maturity</span><span>Humanity</span><span>Scholarship</span>
                 </div>
             </div>
+
         </div>
         <div class="clear"></div>
         <div class="grid_12 prefix_2 suffix_2" id="counselors">
             <div class="box counselors ui-widget-content ui-corner-all" id="counselor-box">
-                <div style="margin: 0px; position: static; overflow: hidden; text-align: center;" class="block">
-                    <h2><a class="ui-corner-top" style="margin-bottom: 4px;" href="#">2015-2016 Moorpark High School Counselors</a></h2>
-</div>
-                <center>
+                <h2><a class="ui-corner-top" href="#">Moorpark High School's 2015-2016 Counselors</a></h2> 
+                <p>
                     <ul>
                         <li>
-                            <a class="counselor one ui-corner-all" href="#"></a>
+                            <a class="counselor one ui-corner-all" href="mailto:ddemmon@mrpk.org"></a>
                             <div>
                                 Mrs. Demmon (A - Da)
                             </div>
                         </li>
                         <li>
-                            <a class="counselor two ui-corner-all" href="#">
+                            <a class="counselor two ui-corner-all" href="mailto:aaguirre@mrpk.org">
                             </a>
                             <div>Mrs. Aguirre (De - Iq)</div>
                         </li>
                         <li>
-                            <a class="counselor three ui-corner-all" href="#">
+                            <a class="counselor three ui-corner-all" href="mailto:dmcintosh@mrpk.org">
                             </a>
                             <div>Mrs. McIntosh (Ir - M)</div>
                         </li>
                         <li>
-                            <a class="counselor four ui-corner-all" href="#">
+                            <a class="counselor four ui-corner-all" href="mailto:nanaya@mrpk.org">
                             </a>
                             <div>Mrs. Anaya (N - Ro)</div>
                         </li>
                         <li>
-                            <a class="counselor five ui-corner-all" href="#">
+                            <a class="counselor five ui-corner-all" href="mailto:aruiz@mrpk.org">
                             </a>
                             <div>Mr. Ruiz (Ru - Z)</div>
                         </li>
-
                     </ul>
-                </center>
+                </p>
             </div>
-            
         </div>
         <div class="clear"></div>
         <div class="grid_12 prefix_2 suffix_2">
