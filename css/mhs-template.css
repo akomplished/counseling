@@ -3,8 +3,6 @@
     background-position:left top, right top, center center;
     background-repeat: repeat-y, repeat-y, repeat;
     background-color: rgb(38,60,39);
+    width: 960px;
 }
 
-.grid_10 .box {
-    background-color: transparent;
-}

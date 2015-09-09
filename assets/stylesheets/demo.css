@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+}
+
+section {
+  display: block;
+}
+
+h1 {
+  padding-top: 20px;
+}
+
+.example-block {
+  font-size: 13px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.banner-block {
+font-size: 13px;
+  overflow: hidden;
+  text-align: center;
+}
+
+
+
+.grid-container {
+  padding-bottom: 20px;
+}
+
+

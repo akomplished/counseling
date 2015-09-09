@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <title>Moorpark High School - Counseling Department</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
@@ -11,13 +13,19 @@
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
     <script type="text/javascript" src="scripts/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="scripts/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="./assets/stylesheets/demo.css" />
+    <link rel="stylesheet" href="./assets/stylesheets/unsemantic-grid-responsive.css" />
     <style type="text/css">
-
         a:link {
             color: rgb(57, 135, 214);
         }
 
+        a:hover {
+            text-decoration: underline;
+        }
+
         body {
+            font: 13px Arial;
             background: url('images/pattern-trans-left.png'), url('images/pattern-trans-right.png'), url('images/pattern-inner.png');
             background-position: left top, right top, center center;
             background-repeat: repeat-y, repeat-y, repeat;
@@ -25,71 +33,83 @@
         }
 
         .banner {
-            background: url('images/pattern-inner.png'), url('images/campus.png');
-            background-position: 0% 100%, 10% 50%;
-            background-clip: border-box, content-box;
-            background-repeat: repeat-x, no-repeat;
-            height: 155px;
+            background: url('images/campus.png');
+            background-position: 40% 95%;
+            background-repeat: no-repeat;
+            height: 180px;
             width: 100%;
             overflow: visible;
+            position: relative;
         }
 
         .notice {
-            height: 125px;
-            width: 200px;            
-            background: url('images/Under_construction.png') 50% 50% no-repeat;
+            height: 175px;
+            width: auto;
+            background: url('images/Under_construction.png') 0% 50% no-repeat;
             background-size: 80px 80px;
             overflow: visible;
-        }
-
-        .notice #notification {
-
-
+            position: relative;
+            float: left;
+            display: inline;
         }
 
         .logo {
-                background: url('images/moorpark.png') 0% 0% no-repeat;
-                height: 155px;
-                width: 100%;
-                overflow: visible;
-                position: relative;
-                z-index: 500;
-            }
-
-        #motto {
-            background: url('images/goldbar-left.png') no-repeat, url('images/goldbar-right.png') no-repeat, url('images/goldmiddle.png') repeat-x;
-            background-position: bottom left, bottom right, bottom left;
+            background: url('images/moorpark.png') 0% 0% no-repeat;
+            background-position: left bottom;
+            height: 180px;
+            width: auto;
+            overflow: visible;
             position: relative;
-            top: -29px;
-            left: 0%;
-            margin-bottom: -10px;
-            z-index: 100;
+            z-index: 500;
         }
 
-            #motto span {
-                width: 33%;
+        .motto {
+            background: url('images/goldbar-left.png') no-repeat, url('images/goldbar-right.png') no-repeat, url('images/goldmiddle.png') repeat-x;
+            background-position: center left, center right, center left;
+            position: relative;
+            top: -35px;
+            height: 25px;
+            z-index: 100;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            text-align: center;
+            overflow: visible;
+        }
+
+            .motto span {
+                width: 33.3%;
                 font-weight: bold;
-                font-size: 1.15em;
-                color: rgb(106, 75, 38);
-                text-shadow: 0 0 5px rgb(255, 255, 190);
+                font-size: 18px;
+                color: rgb(94, 66, 34);
+                text-shadow: 0 0 5px rgb(229, 211, 157);
+                font-family: Georgia;
             }
 
-                #motto span:nth-child(even) {
+                .motto span::first-letter {
+                    font-size: larger;
+                }
+
+                .motto span:nth-child(even) {
                     margin: 0 10% 0 10%;
                 }
 
-        .container_16 {
-            background-color: transparent;
+        .motto-block {
+            margin: 0;
+        }
+
+        #counselor-container {
+            background: url("../images/ui-bg_flat_100_fcfcfc_40x100.png") repeat-x scroll 50% 50%;
+            background-color: #FCFCFC;
         }
 
         #counselor-box {
             padding: 0;
+            margin: 0;
         }
 
             #counselor-box .counselor {
-                display: inline-block;
+                display: block;
                 cursor: pointer;
-                overflow: hidden;
                 padding: 3px;
             }
 
@@ -98,21 +118,17 @@
         }
 
         .counselors ul {
-            margin: 0;
-            padding: 0;
             list-style: none;
             text-align: center;
+            padding-top: 10px 0;
+            margin: 10px 0;
         }
-
-            .counselors ul li:nth-child(even) {
-                margin-left: auto;
-                margin-right: auto;
-            }
 
             .counselors ul li {
                 display: inline-block;
                 padding: 0;
-                margin: 0;
+                margin-left: 1%;
+                margin-right: 1%;
             }
 
         #counselor-box h2 {
@@ -140,79 +156,103 @@
             background: url('images/aruiz.JPG') 50% 20% no-repeat;
         }
 
+
+        .counselors ul li .nametag {
+            font-size: 14px;
+            font-weight: bold;
+            position: relative;
+            top: 2px;
+            overflow: visible;
+            height: 0;
+        }
+
         .counselor {
             width: 150px;
             height: 125px;
-            -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
-            -moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
-            box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,1);
+            border-radius: 10px;
+        }
+
+        .wrapper .counselor {
+            -webkit-box-shadow: inset 0px 0px 0px 1px rgba(46, 46, 46, 0.40);
+            -moz-box-shadow: inset 0px 0px 0px 1px rgba(46, 46, 46, 0.40);
+            box-shadow: inset 0px 0px 0px 1px rgba(46, 46, 46, 0.40);
+            
         }
     </style>
 </head>
 <body>
-    <div class="container_16" style="margin: 0; padding: 0; width: 100%;">
-        <div class="grid_10 prefix_2 alpha">
-            <div class="banner" id="header">
-                <div class="logo" id="mrpk-logo"></div>
-            </div>
+    <div class="grid-container">
+        <div class="grid-70 prefix-5 mobile-grid-100">
+            <section class="banner-block">
+                <div class="banner hide-on-mobile">
+                    <div class="logo" id="mrpk-logo"></div>
+                </div>
+                <div class="banner hide-on-desktop">
+                    <div class="logo" id="mrpk-logo"></div>
+                </div>
+            </section>
         </div>
-        <div class="grid_2 suffix_2 omega">
-            
-            <div class="notice" id="notification"><center>
-                                                      <span style="color: #fff; font-weight: bold;">Currently Under Construction</span>
-                </center>
-                
-            </div>
+        <div class="grid-20 suffix-5">
+            <section class="banner-block">
+                <div class="notice hide-on-mobile" id="notification">
+                    <span style="color: #fff; font-weight: bold;">Currently Under Construction</span>
+                </div>
+            </section>
         </div>
-        <div class="clear"></div>
-        <div class="grid_16" style="height: 0;">
-            <div class="clearfix" id="motto" style="text-align: center; margin-bottom: 10px; font-size: 14px; font-family: Georgia, 'Times New Roman', Times, serif">
+    </div>
+    <div class="grid-100" style="margin: 0; padding: 0; height: 3px">
+        <section class="motto-block">
+            <div class="motto">
                 <span>Maturity</span><span>Humanity</span><span>Scholarship</span>
             </div>
-        </div>
-        <div class="clear"></div>
-        </div>
-    <div class="container_16" style="margin: 0; padding: 0; width: 100%">
-        <div class="grid_12 prefix_2 suffix_2" id="counselors">
-            <div class="box counselors ui-widget-content ui-corner-all" id="counselor-box">
-                <h2><a class="ui-corner-top" href="#">Moorpark High School's 2015-2016 Counselors</a></h2>
-                <p>
+        </section>
+    </div>
+    <div class="grid-container">
+        <div class="grid-90 prefix-5 suffix-5">
+            <div class="box counselors" id="counselor-box">
+                <h2><a class="ui-corner-top" href="#">Welcome to the Moorpark High School Counseling Department Homepage</a></h2>
+                <div class="ui-widget-content ui-corner-bottom" id="counselor-container">
+                    
                     <ul>
                         <li>
-                            <a class="counselor one ui-corner-all" href="mailto:ddemmon@mrpk.org"></a>
-                            <div>
-                                Mrs. Demmon (A - Da)
-                            </div>
+                            <span class="counselor wrapper">
+                                <a class="counselor one" href="mailto:ddemmon@mrpk.org"></a>
+                            </span>
+                            <div class="nametag">Mrs. Demmon (A - Da)</div>
                         </li>
                         <li>
-                            <a class="counselor two ui-corner-all" href="mailto:aaguirre@mrpk.org">
-                            </a>
-                            <div>Mrs. Aguirre (De - Iq)</div>
+                            <span class="counselor wrapper">
+                                <a class="counselor two" href="mailto:aaguirre@mrpk.org"></a>
+                            </span>
+                            <div class="nametag">Mrs. Aguirre (De - Iq)</div>
                         </li>
                         <li>
-                            <a class="counselor three ui-corner-all" href="mailto:dmcintosh@mrpk.org">
-                            </a>
-                            <div>Mrs. McIntosh (Ir - M)</div>
+                            <span class="counselor wrapper"><a class="counselor three" href="mailto:dmcintosh@mrpk.org"></a></span>
+
+                            <div class="nametag">Mrs. McIntosh (Ir - M)</div>
                         </li>
                         <li>
-                            <a class="counselor four ui-corner-all" href="mailto:nanaya@mrpk.org">
-                            </a>
-                            <div>Mrs. Anaya (N - Ro)</div>
+                            <span class="counselor wrapper">
+                                <a class="counselor four" href="mailto:nanaya@mrpk.org"></a>
+                            </span>
+                            <div class="nametag">Mrs. Anaya (N - Ro)</div>
                         </li>
                         <li>
-                            <a class="counselor five ui-corner-all" href="mailto:aruiz@mrpk.org">
-                            </a>
-                            <div>Mr. Ruiz (Ru - Z)</div>
+                            <span class="counselor wrapper">
+                                <a class="counselor five" href="mailto:aruiz@mrpk.org"></a>
+                            </span>
+                            <div class="nametag">Mr. Ruiz (Ru - Z)</div>
                         </li>
                     </ul>
-                </p>
+                </div>
             </div>
         </div>
-        <div class="clear"></div>
-        <div class="grid_9 prefix_2">
-            <div class="box articles ui-widget-content ui-corner-all" id="articles">
+    </div>
+    <div class="grid-container">
+        <div class="grid-30 prefix-5" id="naviance">
+            <div class="box articles" id="articles">
                 <h2><a class="ui-corner-top" href="#">Naviance Family Connection</a></h2>
-                <div class="first article">
+                <div class="article ui-widget-content ui-corner-bottom">
                     <p class="meta">Online College and Career resource that students can access using their Student Connection username and password.</p>
                     <a href="http://connection.naviance.com/moorparkhi" target="_blank" class="image">
                         <img src="images/naviance_60x60.jpg" width="60" height="60" alt="photo" />
@@ -225,37 +265,54 @@
                         <li>Career Assessment Surveys</li>
                         <li>College and Career Research Tools</li>
                     </ul>
-                </div>
-                <div class="box ui-corner-all" style="margin: 3px;">
-                    <h5>Transcripts Questions?</h5>
-                    <div>
-                        <h5>How much do Official Transcripts cost?</h5>
-                        <ul>
-                            <li>Official Transcripts cost a single flat fee of $10 paid at the Student Store.</li>
-                        </ul>
-                    </div>
+                    <p>
 
-                    <div>
-                        <h5>How do I send my transcripts to the Colleges I applied to?</h5>
-                        <div>
-                            <h6>University of California (UC) and/or California State University (CSU) Colleges:</h6>
-                            <ul>
-                                <li>During the application process if the UC or CSU campus requests a transcript you would first pay at Student Store the flat fee.</li>
-                                <li>Then show the receipt you receive to Moorpark High School's Registrar Ms. Montgomery. She will provide you with a sealed hard copy of your official transcript for you to mail. <strong>It is important you do not open this sealed envelope.</strong></li>
-                                <li>If you plan to attend a CSU or UC campus you will need to send a Final Transcript after you graduate. Final Transcripts will be available through the Registrar’s Office approximately two weeks after graduation. <strong>These are not sent via Naviance Family Connection</strong>.</li>
+                        <fieldset style="border-radius: 6px;">
+                            <legend class="ui-widget-header">Transcript Fees</legend>
+                            <ul style="list-style: none;">
+                                <li style="margin-left: 0;">Transcripts for Current Students are a flat fee of $10, paid to the <strong>Student Store.</strong></li>
+                                <br />
+                                <li style="margin-left: 0;">Transcripts for Graduates are $5 each, paid to the <strong>Registrar's Office.</strong></li>
                             </ul>
-                            <h6>Private, Out of State, and/or Common Application Colleges:</h6>
-                            <ul>
-                                <li>The application process for these Colleges is handled through the <a href="http://connection.naviance.com/moorparkhi">Naviance Family Connection</a> website</li>
-                                <li>After you request transcripts through Naviance be sure you pay the flat fee for your transcripts through the Student Store.</li>
-                                <li>Initial, Mid-Year and Final Transcripts will able be handled automatically by your Counselor.</li>
-                                <li>Your Final Transcript will be sent to the school you indicate on your Senior Survey.</li>
-                            </ul>
-                        </div>
-                    </div>
+                        </fieldset>
+
+                        <a href="http://connection.naviance.com/moorparkhi" target="_blank">Naviance - Family Connection</a>
+                    </p>
+
                 </div>
             </div>
         </div>
+        <div class="grid-30" id="communityservice">
+            <div class="box articles" id="articles">
+                <h2><a class="ui-corner-top" href="#">Community Service Hours</a></h2>
+                <div class="article ui-widget-content ui-corner-bottom">
+                    <p class="meta">As a graduation requirement students are expected to earn 40 hours of Community Service through various pre-approved programs.</p>
+                    <a href="http://connection.naviance.com/moorparkhi" target="_blank" class="image">
+                        <img src="images/service.jpg" width="60" height="60" alt="photo" />
+                    </a>
+                    <p>The Counseling Office has many community service opportunities listed on our announcement board. If your student still has not completed the 40 hours required for graduation please encourage them to look in our office. This form needs to be submitted to your students’ counselor once the hours are completed and all signatures have been acquired. Any senior suspended during their senior year must complete an additional 20 hours of community service to be eligible for the graduation ceremony.</p>
+                    <p><strong>The last day for Senior’s to submit their “Form D” to be eligible for graduation is May 27, 2016.</strong><br /><a href="#" target="_blank">Community Service Form D</a></p>
+
+                </div>
+
+            </div>
         </div>
+        <div class="grid-30 suffix-5" id="handbook">
+            <div class="box articles" id="articles">
+                <h2><a class="ui-corner-top" href="#">Counseling Handbook &amp; Course Directory</a></h2>
+                <div class="article ui-widget-content ui-corner-bottom">
+                    <a href="http://counseling-department.mhs.groupfusion.net/modules/locker/files/get_group_file.phtml?gid=2104534&fid=27817755&sessionid=b4cc0acb5ab0580aea5b2305a8edc983" target="_blank" class="image">
+                        <img src="images/crest.png" width="60" height="60" alt="photo" />
+                    </a>
+                    <p>The Moorpark High School Counseling Handbook offers information on curricular, athletic, co-curricular and extra - curricular programs; we ask that you read it carefully.  The handbook is designed to help you set goals and make meaningful decisions regarding your high school career and beyond. </p>
+                    <p>
+                        <a href="http://counseling-department.mhs.groupfusion.net/modules/locker/files/get_group_file.phtml?gid=2104534&fid=27817755&sessionid=b4cc0acb5ab0580aea5b2305a8edc983" target="_blank">Counseling Handbook &amp; Course Directory</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
