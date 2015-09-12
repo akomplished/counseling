@@ -178,6 +178,38 @@
             box-shadow: inset 0px 0px 0px 1px rgba(46, 46, 46, 0.40);
             
         }
+
+        .pst-links {
+            width: 100%;
+            padding-left: 5%;
+            padding-right: 5%;
+            display: block;
+            overflow: hidden;
+        }
+
+        div div.pst-links:first-child {
+            margin-top: 5px;
+        }
+
+        div.pst-links  label {
+            position: relative; 
+            top: -20px;
+            margin-left: 2px;
+            
+        }
+
+        div.pst-links  label.linked {
+            color: rgb(57, 135, 214);
+        }
+
+        div.pst-links  a:hover {
+            text-decoration: none;
+        }
+
+        div.pst-links  a:hover label {
+            text-decoration: underline;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -291,7 +323,7 @@
                         <img src="images/service.jpg" width="60" height="60" alt="photo" />
                     </a>
                     <p>The Counseling Office has many community service opportunities listed on our announcement board. If your student still has not completed the 40 hours required for graduation please encourage them to look in our office. This form needs to be submitted to your students’ counselor once the hours are completed and all signatures have been acquired. Any senior suspended during their senior year must complete an additional 20 hours of community service to be eligible for the graduation ceremony.</p>
-                    <p><strong>The last day for Senior’s to submit their “Form D” to be eligible for graduation is May 27, 2016.</strong><br /><a href="#" target="_blank">Community Service Form D</a></p>
+                    <p>Seniors must have their <a href="#" target="_blank">"Form D”</a> turned in by <strong> May 27, 2016</strong> to be eligible for graduation.</p>
 
                 </div>
 
@@ -300,7 +332,7 @@
         <div class="grid-30 suffix-5" id="handbook">
             <div class="box articles" id="articles">
                 <h2><a class="ui-corner-top" href="#">Counseling Handbook &amp; Course Directory</a></h2>
-                <div class="article ui-widget-content ui-corner-bottom">
+                <div class="article ui-widget-content">
                     <a href="http://counseling-department.mhs.groupfusion.net/modules/locker/files/get_group_file.phtml?gid=2104534&fid=27817755&sessionid=b4cc0acb5ab0580aea5b2305a8edc983" target="_blank" class="image">
                         <img src="images/crest.png" width="60" height="60" alt="photo" />
                     </a>
@@ -309,7 +341,35 @@
                         <a href="http://counseling-department.mhs.groupfusion.net/modules/locker/files/get_group_file.phtml?gid=2104534&fid=27817755&sessionid=b4cc0acb5ab0580aea5b2305a8edc983" target="_blank">Counseling Handbook &amp; Course Directory</a>
                     </p>
                 </div>
-
+                <h2><a href="#">Class Presentation Powerpoints 2015-2016</a></h2>
+                <div class="ui-widget">
+                    <div class="ui-widget-content ui-corner-bottom" style="padding-bottom: 20px;">
+                        <div class="pst-links linked">
+                            <a style="vertical-align: middle;" href="http://counseling-department.mhs.groupfusion.net/modules/locker/files/get_group_file.phtml?gid=2104534&fid=28844514&sessionid=b9b7f1a6497f7e37be845fa22d13d4ab" target="_blank" class="image">
+                                <img src="images/PowerPointIcon.png" width="40" height="40" alt="photo" />
+                                <label>Senior Presentation</label></a>
+                            
+                        </div>
+                        <div class="pst-links linked">
+                            <a href="http://counseling-department.mhs.groupfusion.net/modules/locker/files/get_group_file.phtml?gid=2104534&fid=28865824&sessionid=2b403c1a324e4b1c2f2e3f10516271bc" target="_blank" class="image">
+                                <img src="images/PowerPointIcon.png" width="40" height="40" alt="photo" />
+                                <label>Junior Presentation</label></a>
+                            
+                        </div>
+                        <div class="pst-links nolink">
+                            <a href="#" class="image" onclick="return false;">
+                                <img src="images/comingsoon.png" width="40" height="40" alt="photo" />
+                            </a>
+                            <label>Sophomore Presentation (Coming Soon)</label>
+                        </div>
+                        <div class="pst-links nolink">
+                            <a href="#" class="image" onclick="return false;">
+                                <img src="images/comingsoon.png" width="40" height="40" alt="photo" />
+                            </a>
+                            <label>Freshman Presentation (Coming Soon)</label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
